@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Priscilla Puspita - CV</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.5;
+            color: #333;
+            background: #f5f5f5;
+            padding: 2rem;
+        }
+
+        .cv-container {
+            max-width: 210mm;
+            margin: 0 auto;
+            background: white;
+            padding: 3rem;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 2px solid #667eea;
+            margin-bottom: 1.5rem;
+        }
+
+        .header-photo {
+            flex-shrink: 0;
+        }
+
+        .header-photo img {
+            width: 120px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 3px solid #667eea;
+        }
+
+        .header-content {
+            flex: 1;
+            text-align: left;
+        }
+
+        .header h1 {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 0.3rem;
+        }
+
+        .header .tagline {
+            color: #667eea;
+            font-weight: 500;
+            font-size: 1rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .header .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            font-size: 0.85rem;
+            color: #666;
+        }
+
+        .header .contact-info span {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        /* Sections */
+        .section {
+            margin-bottom: 1.5rem;
+        }
+
+        .section h2 {
+            font-size: 1.2rem;
+            color: #667eea;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.8rem;
+            padding-bottom: 0.3rem;
+            border-bottom: 1px solid #e0e7ff;
+        }
+
+        /* Profile */
+        .profile-text {
+            color: #555;
+            font-size: 0.95rem;
+        }
+
+        /* Experience */
+        .experience-item {
+            margin-bottom: 1.2rem;
+        }
+
+        .experience-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .experience-title {
+            font-weight: 600;
+            color: #333;
+            font-size: 1rem;
+        }
+
+        .experience-company {
+            color: #667eea;
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        .experience-meta {
+            display: flex;
+            gap: 1rem;
+            font-size: 0.85rem;
+            color: #666;
+            margin-top: 0.2rem;
+        }
+
+        .experience-item ul {
+            list-style: none;
+            margin-top: 0.5rem;
+            padding-left: 0;
+        }
+
+        .experience-item li {
+            color: #555;
+            font-size: 0.9rem;
+            padding: 0.2rem 0;
+            padding-left: 1rem;
+            position: relative;
+        }
+
+        .experience-item li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+        }
+
+        .experience-item strong {
+            color: #333;
+        }
+
+        /* Education */
+        .education-item {
+            margin-bottom: 1rem;
+        }
+
+        .education-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .education-degree {
+            font-weight: 600;
+            color: #333;
+        }
+
+        .education-school {
+            color: #667eea;
+        }
+
+        .education-meta {
+            font-size: 0.85rem;
+            color: #666;
+            margin-top: 0.2rem;
+        }
+
+        .thesis {
+            margin-top: 0.5rem;
+            padding: 0.5rem;
+            background: #f8f9fa;
+            border-left: 3px solid #667eea;
+            font-size: 0.85rem;
+        }
+
+        .thesis-label {
+            font-weight: 600;
+            color: #667eea;
+        }
+
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+
+        .skill-category {
+            font-size: 0.9rem;
+        }
+
+        .skill-category h3 {
+            font-size: 0.95rem;
+            color: #667eea;
+            margin-bottom: 0.4rem;
+        }
+
+        .skill-category ul {
+            list-style: none;
+        }
+
+        .skill-category li {
+            color: #555;
+            font-size: 0.85rem;
+            padding: 0.1rem 0;
+        }
+
+        /* Languages & Interests */
+        .inline-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .inline-item {
+            font-size: 0.9rem;
+        }
+
+        .inline-item .label {
+            font-weight: 600;
+            color: #333;
+        }
+
+        .inline-item .value {
+            color: #666;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .cv-container {
+                box-shadow: none;
+                padding: 1.5rem;
+                max-width: 100%;
+            }
+            
+            .section {
+                page-break-inside: avoid;
+            }
+            
+            .experience-item {
+                page-break-inside: avoid;
+            }
+            
+            .header-photo img {
+                border: 2px solid #667eea;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+            
+            .cv-container {
+                padding: 1.5rem;
+            }
+            
+            .header {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+            
+            .header-content {
+                text-align: center;
+            }
+            
+            .header-photo img {
+                width: 100px;
+                height: 125px;
+            }
+            
+            .header .contact-info {
+                justify-content: center;
+            }
+            
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .experience-header {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cv-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-photo">
+                <img src="images/profile.jpg" alt="Priscilla Puspita">
+            </div>
+            <div class="header-content">
+                <h1>PRISCILLA PUSPITA</h1>
+                <p class="tagline">PR & Marketing Professional</p>
+                <div class="contact-info">
+                    <span>📍 Gondel 14 29, Lelystad</span>
+                    <span>📞 +31 616 266402</span>
+                    <span>✉️ priscillapuspita11@gmail.com</span>
+                    <span>💼 linkedin.com/in/priscillapuspita</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Profile -->
+        <section class="section">
+            <h2>Profile</h2>
+            <p class="profile-text">PR and marketing professional with experience in stakeholder coordination, campaign execution, and community-driven content in international environments. Organized, proactive, and passionate about building engaging brand experiences. Available full-time and able to start immediately.</p>
+        </section>
+
+        <!-- Experience -->
+        <section class="section">
+            <h2>Experience</h2>
+            
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="experience-title">Marketing & Communications Intern</div>
+                        <div class="experience-company">SkyTeam Airline Alliance</div>
+                    </div>
+                </div>
+                <div class="experience-meta">
+                    <span>📍 Amstelveen</span>
+                    <span>📅 2025 - 2026</span>
+                    <span>💼 Internship</span>
+                </div>
+                <p style="font-size: 0.85rem; color: #666; margin-top: 0.3rem;">SkyTeam is a global airline alliance consisting of 18 member airlines.</p>
+                <ul>
+                    <li>Developed digital content across web, social media, and newsletters reaching <strong>500K+ monthly active users</strong> across 18 member airlines</li>
+                    <li>Drafted <strong>12+ monthly press releases</strong> and in-flight magazine articles distributed globally</li>
+                    <li>Coordinated communications for <strong>15+ member and employee events</strong> annually, managing stakeholder relationships</li>
+                    <li>Analyzed quarterly content performance, achieving <strong>25% increase in engagement rates</strong> through strategic messaging adaptation</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="experience-title">Recruitment Communications</div>
+                        <div class="experience-company">GoTo Group</div>
+                    </div>
+                </div>
+                <div class="experience-meta">
+                    <span>📍 Jakarta</span>
+                    <span>📅 2021 - 2022</span>
+                    <span>💼 Full-time</span>
+                </div>
+                <p style="font-size: 0.85rem; color: #666; margin-top: 0.3rem;">GoTo is Indonesia's largest technology company.</p>
+                <ul>
+                    <li>Coordinated digital communications supporting <strong>200+ monthly hiring workflows</strong>, improving communication clarity and efficiency</li>
+                    <li>Improved candidate communication clarity, reducing <strong>email response time by 30%</strong> through streamlined processes</li>
+                    <li>Supported <strong>10+ hiring campaigns</strong> with structured messaging reaching <strong>10K+ potential candidates</strong> annually</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="experience-title">Account Coordinator</div>
+                        <div class="experience-company">Occam Komunikasi</div>
+                    </div>
+                </div>
+                <div class="experience-meta">
+                    <span>📍 Jakarta</span>
+                    <span>📅 2021</span>
+                    <span>💼 Full-time</span>
+                </div>
+                <p style="font-size: 0.85rem; color: #666; margin-top: 0.3rem;">Occam Komunikasi is a Jakarta-based public relations and communications agency.</p>
+                <ul>
+                    <li>Developed <strong>50+ press releases, articles, and social media copies</strong> across tech, finance, and lifestyle clients</li>
+                    <li>Managed <strong>8 concurrent client projects</strong> with diverse industry portfolios, ensuring timely delivery and quality</li>
+                    <li>Collaborated with <strong>20+ media partners</strong> to align content with client campaign goals and secure placements</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="experience-title">Publishing Intern</div>
+                        <div class="experience-company">Garena</div>
+                    </div>
+                </div>
+                <div class="experience-meta">
+                    <span>📍 Jakarta</span>
+                    <span>📅 2020</span>
+                    <span>💼 Internship</span>
+                </div>
+                <p style="font-size: 0.85rem; color: #666; margin-top: 0.3rem;">Garena is a leading Southeast Asian digital entertainment company, known for operating mobile games.</p>
+                <ul>
+                    <li>Supported daily content publishing for <strong>Free Fire MENA region</strong> reaching <strong>1M+ players</strong> across platforms</li>
+                    <li>Coordinated with <strong>15+ KOLs/gaming influencers</strong> for regional content creation and campaign execution</li>
+                    <li>Ensured <strong>99% asset readiness</strong> and localization accuracy across <strong>3 regional markets</strong></li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="experience-title">Volunteer Researcher</div>
+                        <div class="experience-company">De Groninger Studentenbond (GSB)</div>
+                    </div>
+                </div>
+                <div class="experience-meta">
+                    <span>📍 Groningen</span>
+                    <span>📅 2024 - 2026</span>
+                    <span>💼 Volunteering</span>
+                </div>
+                <p style="font-size: 0.85rem; color: #666; margin-top: 0.3rem;">GSB is a student union that advocates for student rights and educational quality.</p>
+                <ul>
+                    <li>Contributed to university democracy study surveying <strong>500+ students</strong> on educational rights and representation</li>
+                    <li>Developed <strong>3 comprehensive surveys</strong> with academic rigor and statistical validity</li>
+                    <li>Analyzed qualitative and quantitative data using <strong>SPSS</strong>, producing actionable insights for student advocacy</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section class="section">
+            <h2>Education</h2>
+            
+            <div class="education-item">
+                <div class="education-degree">Master's in Media Studies, Datafication</div>
+                <div class="education-school">University of Groningen</div>
+                <div class="education-meta">📅 2023 - 2026 | Graduated | Focus on digital platforms, audience behavior, and data-driven communication</div>
+                <div class="thesis">
+                    <span class="thesis-label">THESIS:</span> The Strategic Science Communication of NASA and SpaceX on Instagram (graded 8.8)
+                </div>
+            </div>
+
+            <div class="education-item">
+                <div class="education-degree">Bachelor's in International Relations</div>
+                <div class="education-school">Universitas Katolik Parahyangan</div>
+                <div class="education-meta">📅 2016 - 2020 | Graduated | Focus on digital media and diplomacy</div>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section class="section">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Tools</h3>
+                    <ul>
+                        <li>Excel</li>
+                        <li>PowerPoint</li>
+                        <li>Word</li>
+                        <li>Outlook</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Analytics</h3>
+                    <ul>
+                        <li>Google Analytics</li>
+                        <li>Google Ads</li>
+                        <li>Meltwater</li>
+                        <li>SPSS</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>CMS & Platforms</h3>
+                    <ul>
+                        <li>WordPress</li>
+                        <li>Wix</li>
+                        <li>HubSpot</li>
+                        <li>Notion</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Social Media</h3>
+                    <ul>
+                        <li>Instagram</li>
+                        <li>TikTok</li>
+                        <li>LinkedIn</li>
+                        <li>X (Twitter)</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Design</h3>
+                    <ul>
+                        <li>Canva</li>
+                        <li>Photoshop</li>
+                        <li>Premiere Pro</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Soft Skills</h3>
+                    <ul>
+                        <li>Team work</li>
+                        <li>Problem-solving</li>
+                        <li>Stakeholder management</li>
+                        <li>Prioritization</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Languages -->
+        <section class="section">
+            <h2>Languages</h2>
+            <div class="inline-list">
+                <div class="inline-item">
+                    <span class="label">English</span>
+                    <span class="value">— Proficient</span>
+                </div>
+                <div class="inline-item">
+                    <span class="label">Indonesian</span>
+                    <span class="value">— Native</span>
+                </div>
+                <div class="inline-item">
+                    <span class="label">Dutch</span>
+                    <span class="value">— A2 - B1</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interests -->
+        <section class="section">
+            <h2>Interests</h2>
+            <p style="font-size: 0.9rem; color: #555;">Digital Marketing | Public Relations | Content Creation | Creative Design | Social Media | AI</p>
+        </section>
+    </div>
+</body>
+</html>

@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Priscilla Puspita - PR & Marketing Professional</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fafafa;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            margin-left: 2rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #6366f1;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: #333;
+        }
+
+        .hero {
+            min-height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2.5rem 1.5rem 2rem;
+            background: linear-gradient(-45deg, #667eea, #764ba2, #667eea, #764ba2);
+            background-size: 400% 400%;
+            animation: gradientShift 8s ease infinite;
+            color: white;
+            text-align: center;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .hero-photo {
+            width: 120px;
+            height: 150px;
+            border-radius: 12px;
+            border: 3px solid rgba(255,255,255,0.3);
+            object-fit: cover;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+        }
+
+        .hero h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 0.2rem;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero .tagline {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            margin-bottom: 0.4rem;
+            animation: fadeInUp 1s ease 0.2s both;
+            font-weight: 500;
+        }
+
+        .hero .description {
+            max-width: 500px;
+            margin: 0 auto 0.8rem;
+            font-size: 0.95rem;
+            opacity: 0.9;
+            animation: fadeInUp 1s ease 0.4s both;
+            line-height: 1.5;
+        }
+
+        .hero .cta {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            animation: fadeInUp 1s ease 0.6s both;
+            margin-top: 0.3rem;
+        }
+
+        .hero .cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        /* Sections */
+        section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            color: #333;
+        }
+
+        /* Experience Grid */
+        .experience-grid {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .experience-card {
+            background: white;
+            border-radius: 16px;
+            padding: 2.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .experience-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .experience-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #667eea;
+        }
+
+        .experience-card .company {
+            font-weight: 600;
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+
+        .experience-card .meta {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .experience-card .date {
+            color: #999;
+        }
+
+        .experience-card .type {
+            background: #e0e7ff;
+            color: #6366f1;
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+
+        .experience-card .location {
+            color: #888;
+        }
+
+        .experience-card p {
+            color: #555;
+            margin-bottom: 1rem;
+        }
+
+        .experience-card ul {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .experience-card li {
+            color: #555;
+            padding: 0.3rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .experience-card li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+        }
+
+        /* Gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            cursor: pointer;
+            aspect-ratio: 16/10;
+            background: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-item .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 1.5rem;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            color: white;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .gallery-item:hover .overlay {
+            opacity: 1;
+        }
+
+        .gallery-placeholder {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e7f1 100%);
+            border: 2px dashed #667eea;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #667eea;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .gallery-placeholder:hover {
+            background: linear-gradient(135deg, #e4e7f1 0%, #d1d5e8 100%);
+            border-color: #764ba2;
+            color: #764ba2;
+        }
+
+        /* Instagram Phone Frame */
+        .instagram-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+        }
+
+        .phone-frame {
+            width: 280px;
+            height: 570px;
+            background: #1a1a1a;
+            border-radius: 40px;
+            padding: 12px;
+            position: relative;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            transition: transform 0.3s;
+        }
+
+        .phone-frame:hover {
+            transform: translateY(-10px);
+        }
+
+        .phone-screen {
+            width: 100%;
+            height: 100%;
+            background: #000;
+            border-radius: 32px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .phone-screen img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            cursor: pointer;
+        }
+
+        .phone-notch {
+            position: absolute;
+            top: 12px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 30px;
+            background: #1a1a1a;
+            border-radius: 0 0 20px 20px;
+            z-index: 10;
+        }
+
+        .phone-frame::before {
+            content: '';
+            position: absolute;
+            top: 25px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: #333;
+            border-radius: 2px;
+            z-index: 11;
+        }
+
+        .phone-screen .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 1.5rem;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            color: white;
+            opacity: 0;
+            transition: opacity 0.3s;
+            z-index: 5;
+        }
+
+        .phone-frame:hover .overlay {
+            opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+            .phone-frame {
+                width: 240px;
+                height: 490px;
+            }
+        }
+
+        /* Skills Section */
+        #skills {
+            background: white;
+        }
+
+        .skills-container {
+            display: grid;
+            gap: 3rem;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-category {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 12px;
+            border-left: 4px solid #667eea;
+        }
+
+        .skill-category h3 {
+            margin-bottom: 1rem;
+            color: #667eea;
+        }
+
+        .skill-category ul {
+            list-style: none;
+        }
+
+        .skill-category li {
+            padding: 0.5rem 0;
+            color: #555;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .skill-category li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        .languages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .language-item {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .language-item .lang {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        .language-item .level {
+            color: #667eea;
+            font-size: 0.9rem;
+        }
+
+        /* Education Section */
+        #education {
+            background: #f8f9fa;
+        }
+
+        .education-grid {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .education-card {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .education-card h3 {
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+
+        .education-card .school {
+            font-weight: 600;
+            color: #333;
+        }
+
+        .education-card .date {
+            color: #999;
+            margin-bottom: 1rem;
+        }
+
+        .education-card .thesis {
+            background: #e0e7ff;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+        }
+
+        .education-card .thesis-label {
+            font-weight: 600;
+            color: #6366f1;
+            font-size: 0.85rem;
+        }
+
+        /* Contact Section */
+        #contact {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 24px;
+            margin: 4rem auto;
+            text-align: center;
+        }
+
+        #contact h2 {
+            color: white;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 1.1rem;
+        }
+
+        .contact-item a {
+            color: white;
+            text-decoration: none;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.3s;
+        }
+
+        .contact-item a:hover {
+            border-bottom-color: white;
+        }
+
+        /* Published Articles for Occam */
+        .occam-articles {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #eee;
+        }
+
+        .article-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .article-group {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 1rem;
+        }
+
+        .article-client {
+            font-weight: 600;
+            color: #667eea;
+            margin-bottom: 0.75rem;
+            font-size: 0.95rem;
+        }
+
+        .article-link {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.6rem 0.8rem;
+            margin-bottom: 0.5rem;
+            background: white;
+            border-radius: 6px;
+            text-decoration: none;
+            color: #333;
+            transition: all 0.3s ease;
+            border: 1px solid #e0e0e0;
+        }
+
+        .article-link:hover {
+            background: #667eea;
+            color: white;
+            border-color: #667eea;
+            transform: translateX(3px);
+        }
+
+        .article-title {
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .article-btn {
+            font-size: 0.8rem;
+            opacity: 0.8;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #666;
+            background: #f8f9fa;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero .tagline {
+                font-size: 1.1rem;
+            }
+
+            nav a {
+                margin-left: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+
+            .experience-card .meta {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.95);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            font-size: 2rem;
+            color: white;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+
+        /* Section subtitle */
+        .section-subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 3rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <a href="#" class="logo">Priscilla Puspita</a>
+            <div>
+                <a href="#experience">Experience</a>
+                <a href="#education">Education</a>
+                <a href="#skills">Skills</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <img src="images/profile.jpg" alt="Priscilla Puspita" class="hero-photo">
+            <h1>Hi, I'm Priscilla ✌️</h1>
+            <p class="tagline">PR & Marketing | Content & Comms 🚀</p>
+            <p class="description">I help brands tell stories that stick. From newsletters to events, I turn complex messages into content people actually want to read. Currently hunting for my next adventure! 💼</p>
+            <a href="#experience" class="cta">See what I've built ↓</a>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <h2>Experience</h2>
+        <p class="section-subtitle">A track record of delivering impactful communications across global organizations and agencies.</p>
+        
+        <div class="experience-grid">
+            
+            <!-- SkyTeam -->
+            <div class="experience-card">
+                <h3>Marketing & Communications Intern</h3>
+                <p class="company">SkyTeam Airline Alliance</p>
+                <div class="meta">
+                    <span class="date">2025 - 2026</span>
+                    <span class="type">Internship</span>
+                    <span class="location">📍 Amstelveen</span>
+                </div>
+                <p>SkyTeam is a global airline alliance consisting of 18 member airlines.</p>
+                <ul>
+                    <li>Developed digital content across web, social media, and newsletters reaching <strong>500K+ monthly active users</strong> across 18 member airlines</li>
+                    <li>Drafted <strong>12+ monthly press releases</strong> and in-flight magazine articles distributed globally</li>
+                    <li>Coordinated communications for <strong>15+ member and employee events</strong> annually, managing stakeholder relationships</li>
+                    <li>Analyzed quarterly content performance, achieving <strong>25% increase in engagement rates</strong> through strategic messaging adaptation</li>
+                </ul>
+                
+                <!-- In-Flight Articles Gallery -->
+                <h4 style="margin-top: 1.5rem; color: #667eea; font-size: 1.1rem;">📰 In-Flight Articles</h4>
+                <div class="gallery">
+                    <div class="gallery-item" onclick="openLightbox(this)">
+                        <img src="images/skyteam/inflight/skyteam_article_jan_2026.jpg" alt="SkyTeam In-Flight Article - January 2026">
+                        <div class="overlay">
+                            <h4>In-Flight Article</h4>
+                            <p>January 2026 Edition</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Instagram Gallery -->
+                <h4 style="margin-top: 2rem; color: #667eea; font-size: 1.1rem;">📱 Instagram Content</h4>
+                <div class="gallery instagram-gallery" id="skyteam-instagram">
+                    <div class="phone-frame" onclick="openLightbox(this)">
+                        <div class="phone-screen">
+                            <img src="images/skyteam/instagram/social_1.png" alt="SkyTeam Instagram Post 1">
+                            <div class="overlay">
+                                <h4>Instagram Campaign</h4>
+                                <p>Member Airline Collaboration</p>
+                            </div>
+                        </div>
+                        <div class="phone-notch"></div>
+                    </div>
+                    
+                    <div class="phone-frame" onclick="openLightbox(this)">
+                        <div class="phone-screen">
+                            <img src="images/skyteam/instagram/social_2.png" alt="SkyTeam Instagram Post 2">
+                            <div class="overlay">
+                                <h4>Instagram Campaign</h4>
+                                <p>Brand Awareness Content</p>
+                            </div>
+                        </div>
+                        <div class="phone-notch"></div>
+                    </div>
+                    
+                    <div class="phone-frame" onclick="openLightbox(this)">
+                        <div class="phone-screen">
+                            <img src="images/skyteam/instagram/social_3.png" alt="SkyTeam Instagram Post 3">
+                            <div class="overlay">
+                                <h4>Instagram Campaign</h4>
+                                <p>Engagement Post</p>
+                            </div>
+                        </div>
+                        <div class="phone-notch"></div>
+                    </div>
+                </div>
+
+                <!-- Newsletters Gallery -->
+                <h4 style="margin-top: 2rem; color: #667eea; font-size: 1.1rem;">📧 Newsletters</h4>
+                <div class="gallery" id="skyteam-newsletters">
+                    <div class="gallery-item" onclick="openLightbox(this)">
+                        <img src="images/skyteam/newsletters/InHouse_InTouch_Feb_2025.png" alt="InHouse & InTouch Newsletters - February 2025">
+                        <div class="overlay">
+                            <h4>InHouse & InTouch Newsletters</h4>
+                            <p>February 2025 Edition</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox(this)">
+                        <img src="images/skyteam/newsletters/Newsletter_Screenshot_2.png" alt="Newsletter Content Sample">
+                        <div class="overlay">
+                            <h4>Newsletter Content</h4>
+                            <p>Alliance Updates & Member Communications</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GoTo Group -->
+            <div class="experience-card">
+                <h3>Recruitment Communications</h3>
+                <p class="company">GoTo Group</p>
+                <div class="meta">
+                    <span class="date">2021 - 2022</span>
+                    <span class="type">Full-time</span>
+                    <span class="location">📍 Jakarta</span>
+                </div>
+                <p>GoTo is Indonesia's largest technology company.</p>
+                <ul>
+                    <li>Coordinated digital communications supporting <strong>200+ monthly hiring workflows</strong>, improving communication clarity and efficiency</li>
+                    <li>Improved candidate communication clarity, reducing <strong>email response time by 30%</strong> through streamlined processes</li>
+                    <li>Supported <strong>10+ hiring campaigns</strong> with structured messaging reaching <strong>10K+ potential candidates</strong> annually</li>
+                </ul>
+                
+                <!-- Gallery for GoTo Group -->
+                <div class="gallery">
+                    <!-- 
+                    ADD GOTO IMAGES HERE:
+                    Copy the gallery-item block from SkyTeam above
+                    Update paths to: images/goto/your-filename.jpg
+                    Create folder: /Users/priscilla/.openclaw/workspace/portfolio/images/goto/
+                    -->
+                </div>
+            </div>
+
+            <!-- Occam Komunikasi -->
+            <div class="experience-card">
+                <h3>Account Coordinator</h3>
+                <p class="company">Occam Komunikasi</p>
+                <div class="meta">
+                    <span class="date">2021</span>
+                    <span class="type">Full-time</span>
+                    <span class="location">📍 Jakarta</span>
+                </div>
+                <p>Occam Komunikasi is a Jakarta-based public relations and communications agency.</p>
+                <ul>
+                    <li>Developed <strong>50+ press releases, articles, and social media copies</strong> across tech, finance, and lifestyle clients</li>
+                    <li>Managed <strong>8 concurrent client projects</strong> with diverse industry portfolios, ensuring timely delivery and quality</li>
+                    <li>Collaborated with <strong>20+ media partners</strong> to align content with client campaign goals and secure placements</li>
+                </ul>
+                
+                <!-- Gallery for Occam -->
+                <div class="gallery">
+                    <!-- 
+                    ADD OCCAM IMAGES HERE:
+                    Copy the gallery-item block from SkyTeam above
+                    Update paths to: images/occam/your-filename.jpg
+                    Create folder: /Users/priscilla/.openclaw/workspace/portfolio/images/occam/
+                    -->
+                </div>
+
+                <!-- Published Articles -->
+                <div class="occam-articles">
+                    <h4 style="color: #667eea; font-size: 1.1rem; margin: 1.5rem 0 1rem;">📰 Published Articles</h4>
+                    <div class="article-grid">
+                        <!-- Allianz -->
+                        <div class="article-group">
+                            <div class="article-client">Allianz</div>
+                            <a href="pdfs/occam/Allianz_Women_Empowerment.pdf" target="_blank" class="article-link">
+                                <span class="article-title">Women Empowerment</span>
+                                <span class="article-btn">View Article →</span>
+                            </a>
+                            <a href="pdfs/occam/Allianz_Tips_Ramadan.pdf" target="_blank" class="article-link">
+                                <span class="article-title">Tips Ramadan 2021</span>
+                                <span class="article-btn">View Article →</span>
+                            </a>
+                            <a href="pdfs/occam/Allianz_Rainfall_Flood_Risk.pdf" target="_blank" class="article-link">
+                                <span class="article-title">Rainfall and Flood Risk</span>
+                                <span class="article-btn">View Article →</span>
+                            </a>
+                        </div>
+
+                        <!-- Kearney -->
+                        <div class="article-group">
+                            <div class="article-client">Kearney</div>
+                            <a href="pdfs/occam/Kearney_Digital_Health_Applications.pdf" target="_blank" class="article-link">
+                                <span class="article-title">Digital Health Applications</span>
+                                <span class="article-btn">View Article →</span>
+                            </a>
+                            <a href="pdfs/occam/Kearney_Women_Leadership.pdf" target="_blank" class="article-link">
+                                <span class="article-title">Women in Leadership</span>
+                                <span class="article-btn">View Article →</span>
+                            </a>
+                        </div>
+
+                        <!-- NZTE -->
+                        <div class="article-group">
+                            <div class="article-client">NZTE</div>
+                            <a href="pdfs/occam/NZTE_Industry_4_Food_Beverage.pdf" target="_blank" class="article-link">
+                                <span class="article-title">Industry 4.0 for F&B</span>
+                                <span class="article-btn">View Article →</span>
+                            </a>
+                            <a href="pdfs/occam/NZTE_Industry_4_Technology.pdf" target="_blank" class="article-link">
+                                <span class="article-title">Industry 4.0 Technology</span>
+                                <span class="article-btn">View Article →</span>
+                            </a>
+                        </div>
+
+                        <!-- Zumba -->
+                        <div class="article-group">
+                            <div class="article-client">Zumba</div>
+                            <a href="pdfs/occam/Zumba_Step_Into_Happy.pdf" target="_blank" class="article-link">
+                                <span class="article-title">Step into Happy Platform</span>
+                                <span class="article-btn">View Article →</span>
+                            </a>
+                            <a href="pdfs/occam/Zumba_20th_Anniversary.pdf" target="_blank" class="article-link">
+                                <span class="article-title">20th Anniversary</span>
+                                <span class="article-btn">View Article →</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Garena -->
+            <div class="experience-card">
+                <h3>Publishing Intern</h3>
+                <p class="company">Garena</p>
+                <div class="meta">
+                    <span class="date">2020</span>
+                    <span class="type">Internship</span>
+                    <span class="location">📍 Jakarta</span>
+                </div>
+                <p>Garena is a leading Southeast Asian digital entertainment company, known for operating mobile games.</p>
+                <ul>
+                    <li>Supported daily content publishing for <strong>Free Fire MENA region</strong> reaching <strong>1M+ players</strong> across platforms</li>
+                    <li>Coordinated with <strong>15+ KOLs/gaming influencers</strong> for regional content creation and campaign execution</li>
+                    <li>Ensured <strong>99% asset readiness</strong> and localization accuracy across <strong>3 regional markets</strong></li>
+                </ul>
+                
+                <!-- Gallery for Garena -->
+                <div class="gallery" style="margin-top: 1rem;">
+                    <div class="gallery-item" style="max-width: 400px;" onclick="openLightbox(this)">
+                        <img src="images/garena/freefire_mena_visuals.jpg" alt="Free Fire MENA Instagram Content" style="width: 100%; height: auto; object-fit: contain;">
+                        <div class="overlay">
+                            <h4>Free Fire MENA Instagram</h4>
+                            <p>Social media content coordination</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- De Groninger Studentenbond -->
+            <div class="experience-card">
+                <h3>Volunteer Researcher</h3>
+                <p class="company">De Groninger Studentenbond (GSB)</p>
+                <div class="meta">
+                    <span class="date">2024 - 2026</span>
+                    <span class="type">Volunteering</span>
+                    <span class="location">📍 Groningen</span>
+                </div>
+                <p>GSB is a student union that advocates for student rights and educational quality.</p>
+                <ul>
+                    <li>Contributed to university democracy study surveying <strong>500+ students</strong> on educational rights and representation</li>
+                    <li>Developed <strong>3 comprehensive surveys</strong> with academic rigor and statistical validity</li>
+                    <li>Analyzed qualitative and quantitative data using <strong>SPSS</strong>, producing actionable insights for student advocacy</li>
+                </ul>
+                
+                <!-- Gallery for GSB -->
+                <div class="gallery">
+                    <!-- 
+                    ADD GSB IMAGES HERE:
+                    Copy the gallery-item block from SkyTeam above
+                    Update paths to: images/gsb/your-filename.jpg
+                    Create folder: /Users/priscilla/.openclaw/workspace/portfolio/images/gsb/
+                    -->
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+        <h2>Education</h2>
+        <div class="education-grid">
+            <div class="education-card">
+                <h3>Master's in Media Studies, Datafication</h3>
+                <p class="school">University of Groningen</p>
+                <p class="date">2023 - 2026 | Graduated</p>
+                <p>Focus on digital platforms, audience behavior, and data-driven communication</p>
+                <div class="thesis">
+                    <span class="thesis-label">THESIS</span>
+                    <p><strong>The Strategic Science Communication of NASA and SpaceX on Instagram</strong> (graded 8.8)</p>
+                </div>
+            </div>
+            <div class="education-card">
+                <h3>Bachelor's in International Relations</h3>
+                <p class="school">Universitas Katolik Parahyangan</p>
+                <p class="date">2016 - 2020 | Graduated</p>
+                <p>Focus on digital media and diplomacy</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>Skills & Expertise</h2>
+        
+        <div class="skills-container">
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Tools</h3>
+                    <ul>
+                        <li>Excel</li>
+                        <li>PowerPoint</li>
+                        <li>Word</li>
+                        <li>Outlook</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Analytics/Optimization</h3>
+                    <ul>
+                        <li>Google Analytics</li>
+                        <li>Google Ads</li>
+                        <li>Meltwater</li>
+                        <li>SPSS</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>CMS & Platforms</h3>
+                    <ul>
+                        <li>WordPress</li>
+                        <li>Wix</li>
+                        <li>HubSpot</li>
+                        <li>Notion</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Social Media</h3>
+                    <ul>
+                        <li>Instagram</li>
+                        <li>TikTok</li>
+                        <li>LinkedIn</li>
+                        <li>X (Twitter)</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Design</h3>
+                    <ul>
+                        <li>Canva</li>
+                        <li>Photoshop</li>
+                        <li>Premiere Pro</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Soft Skills</h3>
+                    <ul>
+                        <li>Team work</li>
+                        <li>Problem-solving</li>
+                        <li>Stakeholder management</li>
+                        <li>Prioritization</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="text-align: center; margin-top: 3rem; margin-bottom: 1.5rem;">Languages</h3>
+            <div class="languages-grid">
+                <div class="language-item">
+                    <div class="lang">English</div>
+                    <div class="level">Proficient</div>
+                </div>
+                <div class="language-item">
+                    <div class="lang">Indonesian</div>
+                    <div class="level">Native</div>
+                </div>
+                <div class="language-item">
+                    <div class="lang">Dutch</div>
+                    <div class="level">A2 - B1</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interests -->
+    <section id="interests" style="background: #f8f9fa;">
+        <h2>Interests</h2>
+        <div class="languages-grid">
+            <div class="language-item">
+                <div class="lang">Digital Marketing</div>
+            </div>
+            <div class="language-item">
+                <div class="lang">Public Relations</div>
+            </div>
+            <div class="language-item">
+                <div class="lang">Content Creation</div>
+            </div>
+            <div class="language-item">
+                <div class="lang">Creative Design</div>
+            </div>
+            <div class="language-item">
+                <div class="lang">Social Media</div>
+            </div>
+            <div class="language-item">
+                <div class="lang">AI</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Let's Work Together</h2>
+        <p style="font-size: 1.1rem; opacity: 0.9; max-width: 600px; margin: 0 auto;">Ready to take your brand to the next level? Available full-time and able to start immediately.</p>
+        
+        <div class="contact-info">
+            <div class="contact-item">
+                <span>📍</span>
+                <span>Gondel 14 29, Lelystad</span>
+            </div>
+            <div class="contact-item">
+                <span>✉️</span>
+                <a href="mailto:priscillapuspita11@gmail.com">priscillapuspita11@gmail.com</a>
+            </div>
+            <div class="contact-item">
+                <span>📞</span>
+                <a href="tel:+31616266402">+31 616 266402</a>
+            </div>
+            <div class="contact-item">
+                <span>💼</span>
+                <a href="https://linkedin.com/in/priscillapuspita" target="_blank">linkedin.com/in/priscillapuspita</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Priscilla Puspita. All rights reserved.</p>
+    </footer>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <button class="lightbox-close">&times;</button>
+        <img src="" alt="Enlarged view" id="lightbox-img">
+    </div>
+
+    <script>
+        function openLightbox(element) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            
+            // Handle phone frame clicks
+            if (element.classList.contains('phone-frame')) {
+                const img = element.querySelector('.phone-screen img');
+                lightboxImg.src = img.src;
+                lightboxImg.alt = img.alt;
+            } else {
+                // Handle regular gallery items
+                const img = element.querySelector('img');
+                lightboxImg.src = img.src;
+                lightboxImg.alt = img.alt;
+            }
+            
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Close lightbox with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            }
+        });
+    </script>
+</body>
+</html>
