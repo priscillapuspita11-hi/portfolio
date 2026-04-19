@@ -151,28 +151,36 @@
 
         /* Sections */
         section {
-            padding: 5rem 2rem;
+            padding: 3rem 2rem;
             max-width: 1200px;
             margin: 0 auto;
         }
 
         section h2 {
             font-size: 2.5rem;
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
             text-align: center;
             color: #333;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #666;
+            margin-top: -1rem;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
         }
 
         /* Experience Grid */
         .experience-grid {
             display: grid;
-            gap: 2rem;
+            gap: 1.5rem;
         }
 
         .experience-card {
             background: white;
             border-radius: 16px;
-            padding: 2.5rem;
+            padding: 1.5rem;
             box-shadow: 0 4px 6px rgba(0,0,0,0.05);
             transition: transform 0.3s, box-shadow 0.3s;
         }
@@ -184,22 +192,34 @@
 
         .experience-card h3 {
             font-size: 1.5rem;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.25rem;
             color: #667eea;
         }
 
         .experience-card .company {
             font-weight: 600;
             color: #666;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.25rem;
         }
 
         .experience-card .meta {
             display: flex;
             gap: 1rem;
             flex-wrap: wrap;
-            margin-bottom: 1rem;
+            margin-bottom: 0.75rem;
             font-size: 0.9rem;
+        }
+
+        .experience-card p {
+            margin-bottom: 0.75rem;
+        }
+
+        .experience-card ul {
+            margin-top: 0.5rem;
+        }
+
+        .experience-card li {
+            margin-bottom: 0.25rem;
         }
 
         .experience-card .date {
@@ -220,17 +240,17 @@
 
         .experience-card p {
             color: #555;
-            margin-bottom: 1rem;
+            margin-bottom: 0.75rem;
         }
 
         .experience-card ul {
             list-style: none;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
         }
 
         .experience-card li {
             color: #555;
-            padding: 0.3rem 0;
+            padding: 0.2rem 0;
             padding-left: 1.5rem;
             position: relative;
         }
@@ -246,8 +266,8 @@
         .gallery {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-            margin-top: 1.5rem;
+            gap: 1rem;
+            margin-top: 1rem;
         }
 
         .gallery-item {
@@ -402,24 +422,24 @@
 
         .skills-container {
             display: grid;
-            gap: 3rem;
+            gap: 2rem;
         }
 
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
+            gap: 1.5rem;
         }
 
         .skill-category {
             background: #f8f9fa;
-            padding: 2rem;
+            padding: 1.25rem;
             border-radius: 12px;
             border-left: 4px solid #667eea;
         }
 
         .skill-category h3 {
-            margin-bottom: 1rem;
+            margin-bottom: 0.75rem;
             color: #667eea;
         }
 
@@ -428,7 +448,7 @@
         }
 
         .skill-category li {
-            padding: 0.5rem 0;
+            padding: 0.25rem 0;
             color: #555;
             position: relative;
             padding-left: 1.5rem;
@@ -500,9 +520,9 @@
 
         .education-card .thesis {
             background: #e0e7ff;
-            padding: 1rem;
+            padding: 0.75rem;
             border-radius: 8px;
-            margin-top: 1rem;
+            margin-top: 0.75rem;
         }
 
         .education-card .thesis-label {
@@ -516,8 +536,9 @@
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             border-radius: 24px;
-            margin: 4rem auto;
+            margin: 2rem auto;
             text-align: center;
+            padding: 2.5rem;
         }
 
         #contact h2 {
